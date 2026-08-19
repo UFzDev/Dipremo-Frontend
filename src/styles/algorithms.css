@@ -1,0 +1,549 @@
+/* algorithms.css - CSS centralizado para todos los Reportes de la sección Algoritmos */
+
+.engineering-report {
+  animation: fadeIn 0.5s ease-out;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  color: #1a202c;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.engineering-report header,
+.algo-header {
+  border-bottom: 3px solid #2d3748;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.engineering-report h1.algo-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.engineering-report h1.algo-title-sm {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.engineering-report p.algo-subtitle {
+  margin-top: 0.75rem;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.algo-section {
+  margin-bottom: 3rem;
+}
+
+.algo-section-title {
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+  border-left: 4px solid var(--primary);
+}
+
+.algo-section-content {
+  padding-left: 1.25rem;
+}
+
+.algo-text {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.algo-text-sm {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 0;
+}
+
+.algo-text-last {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.algo-list {
+  padding-left: 1.5rem;
+  font-size: 14px;
+  color: #4a5568;
+  line-height: 1.8;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.algo-math-box {
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 2rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: inset 0 1px 4px 0 rgba(0,0,0,0.03);
+}
+
+.algo-math-box-lg {
+  padding: 3rem 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 2rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: inset 0 1px 4px 0 rgba(0,0,0,0.03);
+}
+
+.engineering-report .algo-math-box-dark {
+  padding: 2.5rem;
+  background: #0f172a;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* SVG Text and Math elements */
+.algo-math-svg { display: inline-block; vertical-align: middle; }
+.algo-math-normal { font-style: normal !important; }
+.algo-math-color { fill: var(--primary); color: var(--primary); }
+.algo-math-symbol { font-family: "serif"; font-weight: 300; }
+.algo-math-text-12 { font-size: 12px; }
+.algo-math-text-14 { font-size: 14px; }
+.algo-math-text-16 { font-size: 16px; }
+.algo-math-text-18 { font-size: 18px; }
+.algo-math-text-22 { font-size: 22px; }
+.algo-math-text-24 { font-size: 24px; }
+.algo-math-text-26 { font-size: 26px; }
+.algo-math-text-32 { font-size: 32px; }
+.algo-math-text-50 { font-size: 50px; }
+
+/* Nuevo Motor Matemático HTML/CSS (Elimina solapamientos) */
+.math-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 28px;
+  color: #1a202c;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.math-frac {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  font-size: 0.8em;
+  padding: 0 4px;
+}
+
+.math-frac-num { border-bottom: 2px solid #1a202c; padding-bottom: 2px; }
+.math-frac-den { padding-top: 2px; }
+
+.math-sum {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  position: relative;
+  margin: 0 8px;
+}
+
+.math-sum-sym {
+  font-size: 2em;
+  font-family: serif;
+  font-style: normal;
+  line-height: 1;
+}
+
+.math-sum-limit {
+  font-size: 0.4em;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.math-sqrt {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding-top: 4px;
+}
+
+.math-sqrt-sym {
+  font-size: 1.4em;
+  font-style: normal;
+  margin-right: -4px;
+}
+
+.math-sqrt-content {
+  border-top: 2.5px solid #1a202c;
+  padding: 8px 8px 4px 4px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.math-sup {
+  font-size: 0.6em;
+  vertical-align: top;
+  position: relative;
+  top: -0.5em;
+  left: 2px;
+  font-style: normal;
+}
+
+.math-sub {
+  font-size: 0.5em;
+  vertical-align: bottom;
+  position: relative;
+  bottom: -0.2em;
+  font-style: normal;
+}
+
+.math-paren {
+  font-size: 1.5em;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.math-op {
+  font-style: normal;
+  margin: 0 0.5rem;
+}
+
+
+/* Tables */
+.algo-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+}
+
+.algo-table-header {
+  background: #f8fafc;
+  color: #64748b;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.algo-table-cell {
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+}
+
+.algo-table-cell-bold {
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  font-weight: 700;
+}
+
+.algo-table-row-light {
+  background: #edf2f7;
+  text-align: left;
+}
+
+/* Grids and Info Cards */
+.algo-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.algo-info-card {
+  padding: 1.2rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.algo-info-card-title {
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.algo-info-card-desc {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.algo-info-card-dark {
+  background: #1e293b;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 2px solid #334155;
+  margin-bottom: 1.5rem;
+}
+
+.algo-card-light {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.algo-card-dark {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #1e293b;
+  border-radius: 12px;
+  border: 2px solid #334155;
+}
+
+/* Color themed informational boxes */
+.algo-box-success {
+  padding: 1.25rem;
+  background: #f0fdf4;
+  border-radius: 8px;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+}
+
+.algo-box-danger {
+  padding: 1.25rem;
+  background: #fef2f2;
+  border-radius: 8px;
+  border: 1px solid #fee2e2;
+  color: #991b1b;
+}
+
+.algo-box-warning {
+  padding: 1.25rem;
+  background: #fffaf0;
+  border-radius: 8px;
+  border: 1px solid #fbd38d;
+  color: #9a3412;
+}
+
+.algo-box-info {
+  padding: 1.25rem;
+  background: #f0f9ff;
+  border-radius: 8px;
+  border: 1px solid #bee3f8;
+  color: #075985;
+}
+
+.algo-box-indigo {
+  padding: 1.5rem;
+  background: #f5f3ff;
+  border-radius: 8px;
+  border: 1px solid #ede9fe;
+  color: #5b21b6;
+}
+
+.algo-box-slate {
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+}
+
+
+/* Threshold Rows inside dark cards */
+.algo-threshold-row {
+  margin-top: 0;
+  color: #f8fafc;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mb-1 { margin-bottom: 1rem; }
+.mb-0\.5 { margin-bottom: 0.5rem; }
+
+.text-emerald { color: #10b981; }
+.text-amber { color: #fbbf24; }
+.text-rose { color: #ef4444; }
+
+/* Stage Headers and Badges */
+.algo-stage-card {
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.algo-stage-header {
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+}
+
+.algo-stage-badge {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.bg-violet { background: #8b5cf6; }
+.bg-blue { background: #3b82f6; }
+.bg-cyan { background: #06b6d4; }
+.bg-emerald { background: #10b981; }
+
+.border-violet { border-left: 4px solid #8b5cf6; }
+.border-blue { border-left: 4px solid #3b82f6; }
+.border-cyan { border-left: 4px solid #06b6d4; }
+.border-emerald { border-left: 4px solid #10b981; }
+
+/* Numeric Step Cards */
+.algo-num-step-card {
+  display: flex;
+  align-items: stretch;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.algo-num-step-badge {
+  width: 40px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.algo-num-step-content {
+  padding: 1rem 1.5rem;
+}
+
+.algo-num-step-title {
+  display: block;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+  color: #1e293b;
+  text-transform: uppercase;
+}
+
+.algo-num-step-desc {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+
+
+/* Lists Specifics (Skewness) */
+.algo-list-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.algo-list-card {
+  padding: 1.5rem;
+  background: #eff6ff;
+  border-radius: 8px;
+  border: 1px solid #bfdbfe;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.algo-icon {
+  background: var(--primary);
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: white;
+}
+
+.algo-list-title {
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+  font-size: 14px;
+  color: var(--primary-hover);
+}
+
+.algo-list-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #334155;
+}
+
+/* Code Blocks */
+.algo-code-box {
+  background: #1a202c;
+  color: #ebf8ff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  margin-bottom: 1.5rem;
+}
+
+.algo-code-comment {
+  color: #718096;
+}
+
+/* Status indicators general classes */
+.algo-quote {
+  margin-top: 1.5rem;
+  font-size: 14px;
+  color: #64748b;
+  font-style: italic;
+  text-align: center;
+}
+
+.algo-status-row {
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.algo-status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.algo-status-dot.green { background: #10b981; }
+.algo-status-dot.amber { background: #f59e0b; }
+.algo-status-dot.red { background: #ef4444; }
+
+.algo-status-text {
+  font-size: 14px;
+  color: #f8fafc;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

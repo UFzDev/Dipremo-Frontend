@@ -1,0 +1,188 @@
+/* DIPREMO DESIGN SYSTEM (Vanilla) */
+
+:root {
+  /* Colors */
+  --bg-page: #f1f5f9;
+  --bg-card: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --error: #ef4444;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --info: #06b6d4;
+  --border-subtle: #e2e8f0;
+
+  /* Spacing & Misc */
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Layout */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Base Card */
+.card {
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+
+/* Typography */
+h1 { 
+  font-size: 1.5rem; 
+  font-weight: 700; 
+  margin: 0.5rem 0; /* Ajustado para mejor equilibrio vertical */
+  color: #0f172a; 
+}
+p { margin: 0; color: var(--text-muted); }
+.text-error { color: var(--error) !important; font-size: 13px; font-weight: 600; margin-top: 1rem; }
+.label-sm { font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.value-lg { font-size: 1.8rem; font-weight: 700; margin-top: 0.25rem; }
+
+/* Utilidades de Espaciado */
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-8 { margin-bottom: 2rem; }
+.w-full { width: 100%; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover { background-color: var(--primary-hover); }
+.btn-primary:disabled { background-color: #94a3b8; cursor: not-allowed; }
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--text-muted);
+  border: 1px solid #e2e8f0;
+}
+
+.btn-ghost:hover { background-color: #f8fafc; color: var(--text-main); }
+
+/* Dashboard Layout */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  background: white;
+  border-right: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto; /* Permitir scroll interno si es necesario */
+}
+
+
+.sidebar-menu {
+  flex: 1;
+  margin-top: 2rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.nav-item:hover {
+  background-color: #f8fafc;
+  color: var(--text-main);
+}
+
+.nav-item.active {
+  background-color: #eff6ff;
+  color: var(--primary);
+}
+
+.sidebar-footer {
+  padding-top: 1.5rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.content-area {
+  flex: 1;
+  padding: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Internal Sub-Tabs (e.g. math section) */
+.tabs-inner {
+  display: flex;
+  gap: 2.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+}
+
+.tab-inner-item {
+  padding: 0.75rem 0.25rem;
+  border-bottom: 2px solid transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+  margin-bottom: -1px; /* Align with border */
+}
+
+.tab-inner-item:hover {
+  color: var(--text-main);
+}
+
+.tab-inner-item.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+
